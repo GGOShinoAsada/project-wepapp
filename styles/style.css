@@ -176,10 +176,7 @@ ul.cards li {
 ul.cards li:last-child{
     background-color: #EFEEEA;
     color: blue;
-    
  /*    position: absolute;*/
-   
-
 }
 
 
@@ -304,7 +301,7 @@ ul.cards li:last-child{
     margin-left: 40px;
     background-color:#EFEEEA;
 }
-/*верхнячя часть календаря*/
+/*верхняя часть календаря*/
 .event-text {
     background-color: cornflowerblue;
     padding-left: 10px;
@@ -384,8 +381,8 @@ ul.cards li:last-child{
     padding-left: 40px;
     text-align: justify;
 }
-.flag-item::after{
-    content: ">";
+.footer-item  p a:hover{
+   color: red;
 }
 .footer-web-item{
     display: inline-block;
@@ -415,4 +412,7 @@ ul.cards li:last-child{
     padding-top:10px;
     padding-left: 25px;
     background-color: #B3CEF1;
+}
+.wrapper{
+    padding-top: 50px;
 }
