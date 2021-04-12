@@ -1,15 +1,4 @@
-/*.ss1 {
-    width: 200px;
-}
 
-
-
-.logo {
- 
-    font-size: 20px;
-    color: #2F2CA6;
-}
-*/
 .logo-signature{
     font-style: italic;
     color:#2f2ca6;
@@ -120,41 +109,41 @@
     height: 50px;
     position: absolute;
 }
+
 ul.cards li{
    list-style: none;
    text-align: center;
+   right: 0;
 
 }
 ul.cards li {
-    background-color: gray;
+    background-color: #EFEEEA;
     width: 120px;
     height: 120px;
    padding-left: 30px;
     font-size: 80%;
    display: inline-flex;
-   margin-top: 10px;
-     
 }
 .img-card{
-  
     display: flex;
-    
     margin-top: -40px;
 }
 .cards li img{
-    width : 40px;
+   
+    width : 50px;
     height : 40px;
     background: white;
     border-radius: 40px;
-    
-    margin-top: -70px;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 20px;
     text-align: center;
 
     
 }
 .cards li p.img-card{
     padding-top: 120px;
-
+    margin-top: -70px;
     
 }
 .cards li p.text-msg {
@@ -163,9 +152,6 @@ ul.cards li {
     width: 80px;
     white-space: pre-wrap;
     font-size: 10px;
-  
-    
-
     position: absolute;
    padding: 1px;
    padding-top: 75px;
@@ -178,12 +164,9 @@ ul.cards li {
 .cards li{
     margin-left: 2%;
     position: relative;
-   
-
-   
 }
 .cards{
-    text-align: center;
+   text-align: center;
     position: relative;
 }
 /*управление нажатием*/
@@ -191,10 +174,10 @@ ul.cards li {
     border: 1px solid black;
 }
 ul.cards li:last-child{
-    background-color: lightgray;
+    background-color: #EFEEEA;
     color: blue;
     
-     position: absolute;
+ /*    position: absolute;*/
    
 
 }
@@ -319,7 +302,7 @@ ul.cards li:last-child{
     width: 25%;
     display: inline-flex;
     margin-left: 40px;
-    background-color: #BDCDF1;
+    background-color:#EFEEEA;
 }
 /*верхнячя часть календаря*/
 .event-text {
