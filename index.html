@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/mainmenu.css">
+    <title>Sterra</title>
+    <script src="images/javascript/jquery.js" defer></script>
+</head>
+<body>
+   <div class="logo">
+     <img src="images/Layer 28.jpg" width="100px" height="25px">
+   </div>
+   <h4 class="logo-signature">Безпастность превыше всего</h4>
+  <div class="login">
+    <p class="t">Вход в личный кабинет</p>
+    <form action="">
+      <input type="email" placeholder="email">
+      <input type="password" placeholder="пароль"> <button class="btn" type="submit"><p class="login-text">войти</p><i class="raw"></i></button>
+    </form>
+    <a class="a-red" href="#">Зарегистрироваться</a><a class="a-gray" href="#">я забыл пароль</a>
+  </div>
+  <div class="menu-web">
+    <div class="menu-web-item">
+      <nav class="dws-menu">
+        <ul>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Продукция</a>
+            <ul>
+              <li><a href="#">Каталог продуктов</a>
+              <li><a href="#">Сертификаты</a></li>
+            </ul>
+          <li><a href="#">Решения</a></li>
+          <li><a href="#">Поддержка</a></li>
+          <li><a href="#">Партнеры</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="menu-web-item">
+      <form action="#">
+        <input type="text" placeholder="поиск по сайту" />
+        <input type="submit" class="btn-search" value="&#128269;">
+      </form>
+    </div>
+  </div>
+  
+ <br/><br/><br/><br/>
+
+  <!--слайдер-->
+  <div class="wrapper">
+    <div class="slider">
+      <ul>
+        <li><img src="img/001.jpg" alt="" /></li>
+        <li><img src="img/002.jpg" alt="" /></li>
+        <li><img src="img/003.jpg" alt="" /></li>
+        <li><img src="img/004.jpg" alt="" /></li>
+      </ul>
+    </div>
+  </div>
+<script type="text/javascript" src="images/javascript/slider.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".slider").each(function () {
+      var obj = $(this);
+      $(obj).append("<div class='nav'></div>");
+
+      $(obj).find("li").each(function () {
+        $(obj).find(".nav").append("<span rel='" + $(this).index() + "'></span>");
+        $(this).addClass("slider" + $(this).index());
+      });
+
+      $(obj).find("span").first().addClass("on");
+    });
+  });
+
+  function sliderJS(obj, sl) // slider function
+  {
+    var ul = $(sl).find("ul");
+    var bl = $(sl).find("li.slider" + obj);
+    var step = $(bl).width();
+    $(ul).animate({
+      marginLeft: "-" + step * obj
+    }, 500);
+  }
+
+  $(document).on("click", ".slider .nav span", function () // slider click navigate
+    {
+      var sl = $(this).closest(".slider");
+      $(sl).find("span").removeClass("on");
+      $(this).addClass("on");
+      var obj = $(this).attr("rel");
+      sliderJS(obj, sl);
+      return false;
+    });
+</script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23131825-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+        '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <script type="text/javascript">
+    new Image().src = "http://counter.yadro.ru/hit?r" +
+      escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+          screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random();
+  </script>
+
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function () {
+        try {
+          w.yaCounter20963398 = new Ya.Metrika({
+            id: 20963398,
+            webvisor: true,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            trackHash: true
+          });
+        } catch (e) {}
+      });
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () {
+          n.parentNode.insertBefore(s, n);
+        };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+  </script><noscript>
+    <div><img src="//mc.yandex.ru/watch/20963398" style="position:absolute; left:-9999px;" alt=""></div>
+  </noscript>
+  <!--конец функционального блока слайдера-->
+  <div class="solution-font">
+    <div class="block"></div>
+    <p class="text">Решения</p><a href="#" class="link-blue" >все решения</a>
+  </div>
+  <ul class="cards">
+      <li class="card-item"><p class="img-card"><img src="images/card1.png"></p><p class="text-msg">для финансовой сферы</p></li>
+      <li class="card-item"><p class="img-card"><img src="images/card2.png"></p><p class="text-msg">для государственного сектора</p></li>
+      <li class="card-item"><p class="img-card"><img src="images/card3.png"></p><p class="text-msg">для силовых структур</p></li>
+      <li class="card-item"><p class="img-card"><img src="images/card4.png"></p><p class="text-msg">для малого и среднего бизнеса</p></li>
+      <li class="card-item"><p class="img-card"><img src="images/card5.png"></p><p class="text-msg">для промышленности и тэк</p></li>
+      <li id="card-itemfin"><p class="img-card-blue"><a href="#" class="text-sol">Все решения</a></li>
+  </ul>
+  <div class="solution-font">
+    <div class="block"></div>
+    <p class="text">Новости</p><a href="#" class="link-red" >все новости</a>
+  </div>
+  <ul class="events">
+    <li class="event">
+      <p class="event-text">24</p>
+       <p class="event-month">мар</p>
+      <h3 class="event-body">Заголовок новости</h3>
+      <p class="event-body-text">Защита информации жестко контролируется российским законодательством, поэтому все наши продукты сертифицированы и могут применяться для защиты конфиденциальной иинформации</p>
+    </li>
+    <li class="event">
+      <p class="event-text">18</p>
+      <p class="event-month">мар</p>
+      <h3 class="event-body">Многострочный заголовок новости</h3>
+      <p class="event-body-text">Защита информации жестко контролируется российским законодательством, поэтому все наши продукты сертифицированы и могут применяться для защиты конфиденциальной иинформации</p>
+    </li>
+    <li class="event">
+      <p class="event-text">18</p>
+      <p class="event-month">мар</p>
+      <h3 class="event-body">Заголовок новости</h3>
+      <p class="event-body-text">Защита информации жестко контролируется российским законодательством, поэтому все наши продукты сертифицированы и могут применяться для защиты конфиденциальной иинформации</p>
+    </li>
+   </ul>
+   <div class="footer">
+     <div class="footer-item">
+       <p class="head">ПРОДУКТЫ</p>
+       <p><a href="#">Каталог продуктов</a></p>
+       <ul>
+        <li><p><a href="#">С-Terra клиент (CSP VPN Client/Server)</a></p></li>
+        <li><p><a href="#">C-Terra клиент-М</a></p></li>
+        <li><p><a href="#">C-терра шлюз (CSP VPN Gate)</a></p></li>
+        <li><p><a href="#">Модуль MCM (NME-RVPN)</a></p></li>
+        <li><p><a href="#">CSP VPN Gate E</a></p></li>
+        <li><p><a href="#">C-Терра L2</a></p></li>
+        <li><p><a href="#">СПДС "ПОСТ"</a></p></li>
+        <li><p><a href="#">Виртуальный шлюз</a></p></li>
+        <li><p><a href="#">С-Teрра КП</a></p></li>
+       </ul>
+       <p><a href="#">Сертификаты</a></p>
+     </div>
+     <div class="footer-item">
+       <p class="head">РЕШЕНИЯ</p>
+       <p><a href="#">Типовые сценарии применения продуктов</a></p>
+       <p><a href="#">Примеры дополнительных возможностей продуктов</a></p>
+       <p><a href="#">Отраслевые решения</a></p>
+       <ul>
+         <li><p><a href="#">Для финансовой сферы</a></p></li>
+         <li><p><a href="#">Для государственного сектора</a></p></li>
+         <li><p><a href="#">Для силовых структур</a></p></li>
+         <li><p><a href="#">Для малого и среднего бизнеса</a></p></li>
+         <li><p><a href="#">Для промышленности и ТЭК</a></p></li>
+       </ul>
+       <p><a href="#">Конструктор решения</a></p>
+     </div>
+     <div class="footer-item">
+       <p class="head">ПОДДЕРЖКА</p>
+       <p><a href="#">Документация</a></p>
+       <ul>
+         <li><p><a href="#">Нормативные документы</a></p></li>
+       </ul>
+       <p><a href="#">Обучение</a></p>
+       <p><a href="#">Активация ПО</a></p>
+       <p><a href="#">Часто задаваемые вопросы (FAQ)</a></p>
+       <p class="head">ПАТТЕРНЫ</p><br/>
+       <p><a href="#">Технологические паттерны</a></p>
+       <p><a href="#">Бизнес паттерны</a></p>
+     </div>
+     <div class="footer-item">
+      <p class="head">О КОМПАНИИ</p>
+      <p><a href="#">История компании</a></p>
+      <p><a href="#">Лицензии</a></p>
+      <p><a href="#">Выставки и конференции</a></p>
+      <p><a href="#">Награды и благодарности</a></p>
+      <p><a href="#">Работа у нас</a></p>
+      <ul>
+        <li><p><a href="#">Вакансии</a></p></li>
+      </ul>
+      <p class="head">КОНТАКТЫ</p>
+     </div>
+   </div>
+   <div class="footer-web">
+     <div class="footer-web-item">
+        <div class="logo-min">
+          <img src="images/Layer 28.jpg" id="img-footer" widt="100px" height="25px">
+        </div>
+     </div>
+     <div class="footer-web-item">
+        <p>Адрес: <address>
+           124460, Москва, г. Зеленоград, проезд 4806, дом 6, этаж 4-й основной, пом. 1.</address>
+        </address></p>
+        <p>Телефон/факс <label type="tel">+7 (499) 940 9061</label></p>
+        <p>Электорнная почта: <label type="email">information@s-terra.com</label></p>
+
+     </div>
+     <div class="footer-web-item">
+       <p>&#169;2014 ЗАО С-Терра СиЭсПи</p>
+       <p>Все права защищены</p>
+       <p class="site-author">Создание сайта ИЕСА</p>
+     </div>   
+   </div>
+</body>
+</html>

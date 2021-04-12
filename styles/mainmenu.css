@@ -1,0 +1,131 @@
+
+.header{
+ margin-top: 50px;
+ font-family: Cuprum, Arial, Helvetica, sans-serif;
+}
+.dws-menu *{
+ margin: 0;
+ padding: 0;
+}
+.dws-menu ul{
+ list-style: none;
+}
+.dws-menu > ul{
+ display: flex;
+ justify-content: center;
+}
+.dws-menu > ul li{
+ position: relative;
+ border-right: 2px solid white;
+}
+.dws-menu > ul li:first-child{
+ border-left: 1px solid #b2b3b5;
+}
+.dws-menu > ul li:last-child{
+ border-right: 1px solid #babbbd;
+}
+
+.dws-menu > ul li a{
+ display: block;
+
+ 
+ background-color: darkblue; 
+ color: white;
+ padding: 15px 30px 15px 40px;
+ 
+ text-decoration: none;
+
+ transition: all 0.3s ease;
+}
+.dws-menu li a:hover{
+
+ background-color: lightblue;
+ color: #ffffff;
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.3s ease;
+}
+
+/*sub menu*/
+.dws-menu li ul{
+ position: absolute;
+ min-width: 150px;
+ display: none;
+}
+.dws-menu li > ul li{
+ border: 1px solid #c7c8ca;
+ 
+}
+.dws-menu li > ul li a{
+ padding: 10px;
+ text-transform: none;
+ background-color: #7D9FD4;
+  padding-right: 60px;
+  white-space: nowrap;
+}
+
+.dws-menu li:hover > ul{
+ display: block;
+}
+
+
+
+/*слайдер*/
+.body {
+      background: #eee;
+      margin: 0;
+      font-family: arial;
+    }
+
+.wrapper {
+      background: #fff;
+      width: 700px;
+      padding: 1px 15px 15px;
+      margin: 0 auto;
+    }
+
+.slider {
+      z-index: 9;
+      width: 700px;
+      height: 290px;
+      overflow: hidden;
+      margin: 0 0 7px;
+      position: relative;
+    }
+
+.slider ul,
+.slider li {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+}
+
+.slider ul {
+      width: 9999px;
+}
+.slider ul li {
+      list-style-type: none;
+      float: left;
+      width: 700px;
+      height: 290px;
+}
+.slider .nav {
+      position: absolute;
+      left: 15px;
+      bottom: 12px;
+}
+.slider .nav span {
+      opacity: 0.9;
+      background: #fff;
+      margin: 0 8px 0 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      overflow: hidden;
+      display: block;
+      float: left;
+      box-shadow: 0 1px 2px #000;
+}
+.slider .nav span.on {
+      background: blue;
+}
